@@ -1,0 +1,12 @@
+target "SWTBot Example Target Platform"
+
+with requirements source
+
+location "http://download.eclipse.org/releases/neon/" {
+	org.eclipse.platform.feature.group
+}
+
+location "http://download.eclipse.org/technology/swtbot/releases/latest" {
+	org.eclipse.swtbot.ide.feature.group
+	org.eclipse.swtbot.eclipse.feature.group
+}
