@@ -15,6 +15,13 @@
             class="com.examples.view.views.SampleView"
             id="com.examples.view.views.SampleView">
       </view>
+      <view
+            category="com.examples.view"
+            class="com.examples.view.CalculatorView"
+            id="com.examples.view.calcview"
+            name="Calculator View"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>
