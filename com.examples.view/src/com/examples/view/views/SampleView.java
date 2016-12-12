@@ -143,6 +143,16 @@ public class SampleView extends ViewPart {
 			invisibleRoot = new TreeParent("");
 			invisibleRoot.addChild(root);
 		}
+		@Override
+		public void dispose() {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+			// TODO Auto-generated method stub
+			
+		}
 	}
 
 	class ViewLabelProvider extends LabelProvider {
