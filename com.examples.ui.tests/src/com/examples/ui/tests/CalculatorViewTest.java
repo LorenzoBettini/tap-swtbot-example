@@ -7,18 +7,15 @@ import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SWTBotJunit4ClassRunner.class)
-public class CalculatorViewTest {
-
-	private static SWTWorkbenchBot bot;
+public class CalculatorViewTest extends AbstractTest {
 
 	@BeforeClass
-	public static void initBot() throws InterruptedException {
+	public static void showView() throws InterruptedException {
 		bot = new SWTWorkbenchBot();
 		// Open our view using the Eclipse Show View dialog
 		bot.menu("Window").menu("Show View").menu("Other...").click();
@@ -28,11 +25,6 @@ public class CalculatorViewTest {
 		bot.tree().expandNode("Sample Category").getNode("Calculator View").select();
 		bot.button("OK").click();
 		bot.waitUntil(shellCloses(dialog));
-	}
-
-	@AfterClass
-	public static void afterClass() {
-		bot.resetWorkbench();
 	}
 
 	@Test
